@@ -16,7 +16,7 @@ Create Profile in Intune
 Custom OMA-URI Settings
 1. In the Custom OMA-URI Settings blade click Add.
 2. Enter a descriptive name in the Name field (this name will appear in the Windows UI on the client).
-3. Enter ./User/Vendor/MSFT/VPNv2/Example%20Profile%Name/ProfileXML or ./Device/Vendor/MSFT/VPNv2/Example%20Profile%Name/ProfileXML (Device Tunnel)
+3. Enter _./User/Vendor/MSFT/VPNv2/Example%20Profile%Name/ProfileXML_ or _./Device/Vendor/MSFT/VPNv2/Example%20Profile%Name/ProfileXML_ (Device Tunnel)
 in the OMA-URI field. I’ve used Always On VPN as an example here, but you can use any text you like. If it includes spaces they must be escaped using %20, as shown here. Also, don’t forget to include the leading “.“.
 4. Select String (XML file) from the Data type drop-down list.
 5. Click the folder next to the Select a file field and select your ProfileXML file.
