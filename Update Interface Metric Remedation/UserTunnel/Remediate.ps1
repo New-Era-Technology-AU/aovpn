@@ -298,5 +298,5 @@ if($Connections -like "*$ProfileName*"){
     & rasdial.exe $ProfileName 
 }
 
-Write-Output "Interface Metrixs Updated"
+Write-Output "Interface Metrics Updated"
 Exit 0

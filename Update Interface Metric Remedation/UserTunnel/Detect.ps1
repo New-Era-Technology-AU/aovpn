@@ -40,19 +40,19 @@ Function Check-RASPhoneBook {
     $SelectedProfile = $profHash.GetEnumerator() | Where-Object { $_.name -eq $compare }
 
     If ($SelectedProfile) {
-        $IPv4_MetrixString = "IpInterfaceMetric=$desiredMetric"
-        $IPv6_MetrixString = "Ipv6InterfaceMetric=$desiredMetric"
+        $IPv4_MetricString = "IpInterfaceMetric=$desiredMetric"
+        $IPv6_MetricString = "Ipv6InterfaceMetric=$desiredMetric"
 
         Write-Verbose "Checking $($SelectedProfile.key) interface Metric"
-        if(!($SelectedProfile.value -match $IPv4_MetrixString)){
-            Write-Output "IPv4 Metrix is wrong  - Moving to remediation"
+        if(!($SelectedProfile.value -match $IPv4_MetricString)){
+            Write-Output "IPv4 Metric is wrong  - Moving to remediation"
             Exit 1
         }
-        if(!($SelectedProfile.value -match $IPv6_MetrixString)){
-            Write-Output "IPv6 Metrix is wrong - Moving to remediation"
+        if(!($SelectedProfile.value -match $IPv6_MetricString)){
+            Write-Output "IPv6 Metric is wrong - Moving to remediation"
             Exit 1
         }
-        Write-Output "Interface metrixs are correct - No Further Action Required"
+        Write-Output "Interface Metrics are correct - No Further Action Required"
         Exit 0   
     } #If found
     Else {
